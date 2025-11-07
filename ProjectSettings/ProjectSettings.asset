@@ -933,12 +933,12 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 68fe723a-53d5-4a6b-ab46-93f3a5b33aea
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: DefiledSouls 2025-11-05_14-01-00
   organizationId: guzew_07
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
