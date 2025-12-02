@@ -10,6 +10,10 @@ public class DialogSystem : MonoBehaviour
     public int numberDialog = 0;
     public Button button;
 
+    void Start()
+    {
+        windowDialog.SetActive(false);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
