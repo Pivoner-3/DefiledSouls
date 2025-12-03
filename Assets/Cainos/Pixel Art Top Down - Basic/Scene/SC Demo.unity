@@ -318,7 +318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28100, y: 19639}
+  m_AnchoredPosition: {x: 26285, y: 18781.002}
   m_SizeDelta: {x: 20000, y: 1500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &37352771
@@ -12065,7 +12065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6214, y: 19622}
+  m_AnchoredPosition: {x: 6214, y: 18768}
   m_SizeDelta: {x: 12000, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475407403
@@ -14449,7 +14449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6214, y: 19621.998}
+  m_AnchoredPosition: {x: 6214, y: 18767.998}
   m_SizeDelta: {x: 12000, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672942356
@@ -14694,7 +14694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.011688232, y: -149.55974}
+  m_AnchoredPosition: {x: -0.011688232, y: -149.55972}
   m_SizeDelta: {x: 1474.4099, y: 371.3331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682967247
@@ -17527,7 +17527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPDamageEnemy
   damageEnemy: 15
-  attackCoolDown: 1
+  attackDelay: 1
   maxHealthEnemy: 120
   currentHealthEnemy: 120
   HPbarEnemy: {fileID: 37352773}
@@ -18331,7 +18331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -18352,7 +18352,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -29581,7 +29581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28061.002, y: 19622.998}
+  m_AnchoredPosition: {x: 26246, y: 18765}
   m_SizeDelta: {x: 20000, y: 1500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525256371
@@ -33344,7 +33344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960.4, y: -144}
+  m_AnchoredPosition: {x: 930, y: -144}
   m_SizeDelta: {x: 112.362, y: 107.536}
   m_Pivot: {x: 0.49999997, y: 1.0000002}
 --- !u!114 &1824841708
