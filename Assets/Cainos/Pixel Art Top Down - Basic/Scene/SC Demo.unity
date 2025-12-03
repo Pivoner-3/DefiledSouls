@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 37352770}
   - component: {fileID: 37352772}
   - component: {fileID: 37352771}
+  - component: {fileID: 37352773}
   m_Layer: 5
   m_Name: HP angel
   m_TagString: Untagged
@@ -359,6 +360,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37352769}
   m_CullTransparentMesh: 1
+--- !u!114 &37352773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37352769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4fb60412855d341811baa29668d7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HBarEnem
+  damageEnemy: 15
+  hImageEnemy: {fileID: 37352771}
+  HPDamagePl: {fileID: 1694981233}
+  HPDamageEn: {fileID: 936687942}
 --- !u!4 &46739898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235,
@@ -1122,9 +1139,9 @@ RectTransform:
   m_LocalScale: {x: 0.021687986, y: 0.021687986, z: 0.021687986}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 475407402}
   - {fileID: 1525256370}
   - {fileID: 37352770}
+  - {fileID: 475407402}
   - {fileID: 672942354}
   m_Father: {fileID: 1017523750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14409,7 +14426,7 @@ GameObject:
   - component: {fileID: 672942354}
   - component: {fileID: 672942357}
   - component: {fileID: 672942356}
-  - component: {fileID: 672942355}
+  - component: {fileID: 672942358}
   m_Layer: 5
   m_Name: HP player
   m_TagString: Untagged
@@ -14436,21 +14453,6 @@ RectTransform:
   m_AnchoredPosition: {x: 6214, y: 19621.998}
   m_SizeDelta: {x: 12000, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &672942355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672942353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a756f59065c4f49aa711c50789d276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HBar
-  maxHealth: 100
-  currentHealth: 100
-  hImage: {fileID: 672942356}
 --- !u!114 &672942356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14489,6 +14491,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672942353}
   m_CullTransparentMesh: 1
+--- !u!114 &672942358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672942353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a756f59065c4f49aa711c50789d276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HBar
+  InfoPlayer: {fileID: 1694981233}
+  hImage: {fileID: 672942356}
 --- !u!1001 &677148539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17321,6 +17337,7 @@ GameObject:
   - component: {fileID: 936687937}
   - component: {fileID: 936687940}
   - component: {fileID: 936687941}
+  - component: {fileID: 936687942}
   m_Layer: 20
   m_Name: "idle  \u0430\u043D\u0433\u0435\u043B_0"
   m_TagString: Enemy
@@ -17498,6 +17515,22 @@ MonoBehaviour:
   - 
   numberDialog: 0
   button: {fileID: 1824841708}
+--- !u!114 &936687942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936687936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c6edace4cb44f46a469f83608aa7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPDamageEnemy
+  maxHealthEnemy: 120
+  currentHealthEnemy: 120
+  HPbarEnemy: {fileID: 37352773}
+  HPDamagePl: {fileID: 1694981233}
 --- !u!1001 &961753988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31685,6 +31718,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cainos.PixelArtTopDown_Basic.TopDownCharacterController
   speed: 10
+--- !u!114 &1694981233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694981226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f86baa72d815541a2343b0fb332324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPDamagePlayer
+  HPbar: {fileID: 672942358}
+  maxHealth: 100
+  currentHealth: 100
+  damagePlayer: 10
+  attackbool: 0
+  attack: 114
 --- !u!4 &1696563834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: 6d69371a87148ee4dac7b2b814437ffd,
@@ -37598,6 +37649,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1694981232}
+    - targetCorrespondingSourceObject: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1694981233}
   m_SourcePrefab: {fileID: 100100000, guid: ef67ba864d1ecc042b5f4cf48455c0a6, type: 3}
 --- !u!1001 &5724624599686979093
 PrefabInstance:

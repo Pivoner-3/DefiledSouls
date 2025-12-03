@@ -2,18 +2,43 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HBarEnem : MonoBehaviour
 {
-    public float maxHealthEnemy = 120f;
-    public float currentHealthEnemy;
-    public float damageEnemy = 15f;
     [SerializeField] public Image hImageEnemy;
+    public HPDamagePlayer HPDamagePl;
+    public HPDamageEnemy HPDamageEn;
 
     void Start()
     {
         hImageEnemy = GetComponent<Image>();
-        currentHealthEnemy = maxHealthEnemy;
+        if (hImageEnemy == null)
+        {
+            GameObject healthBar = GameObject.Find("HP angel");
+            if (healthBar != null)
+            {
+                hImageEnemy = healthBar.GetComponent<Image>();
+            }
+        }
+
+        if (HPDamagePl == null)
+        {
+            GameObject healtDamPl = GameObject.Find("HPDamagePlayer");
+            if (healtDamPl != null)
+            {
+                HPDamagePl = healtDamPl.GetComponent<HPDamagePlayer>();
+            }
+        }
+
+        if (HPDamageEn == null)
+        {
+            GameObject healtDamPl = GameObject.Find("HPDamagePlayer");
+            if (healtDamPl != null)
+            {
+                HPDamagePl = healtDamPl.GetComponent<HPDamagePlayer>();
+            }
+        }
+        HPDamageEn.currentHealthEnemy = HPDamageEn.maxHealthEnemy;
     }
     void Update()
     {
-        hImageEnemy.fillAmount = currentHealthEnemy / maxHealthEnemy;
+        hImageEnemy.fillAmount = HPDamageEn.currentHealthEnemy / HPDamageEn.maxHealthEnemy;
     }
 }
