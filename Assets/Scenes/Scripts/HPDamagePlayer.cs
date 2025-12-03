@@ -3,6 +3,7 @@ using UnityEngine.UI;
 public class HPDamagePlayer : MonoBehaviour
 {
     public HBar HPbar;
+    public HPDamageEnemy HpdamEn;
     public float maxHealth = 100f;
     public float currentHealth;
     public float damagePlayer = 10f;
@@ -52,7 +53,7 @@ public class HPDamagePlayer : MonoBehaviour
             }
 
             // Если враг достаточно близко
-            if (closestDistance < 5f)
+            if (closestDistance < 3f)
             {
                 HPDamageEnemy enemyScript = closestEnemy.GetComponent<HPDamageEnemy>();
                 if (enemyScript != null)
@@ -66,15 +67,18 @@ public class HPDamagePlayer : MonoBehaviour
         attackbool = false;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void TakeDamage()
     {
-        if (attackbool)
+        currentHealth -= HpdamEn.damageEnemy;
+        Debug.Log($"Игрок получил урон.");
+        if (currentHealth <= 0)
         {
-            HPDamageEnemy enemy = col.gameObject.GetComponent<HPDamageEnemy>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage();
-            }
+            Die();
         }
+    }
+    private void Die()
+    {
+        Debug.Log("Игрок погиб!");
+        Destroy(gameObject);
     }
 }

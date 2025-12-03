@@ -372,7 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4fb60412855d341811baa29668d7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HBarEnem
-  damageEnemy: 15
   hImageEnemy: {fileID: 37352771}
   HPDamagePl: {fileID: 1694981233}
   HPDamageEn: {fileID: 936687942}
@@ -17527,6 +17526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c6edace4cb44f46a469f83608aa7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPDamageEnemy
+  damageEnemy: 15
+  attackCoolDown: 1
   maxHealthEnemy: 120
   currentHealthEnemy: 120
   HPbarEnemy: {fileID: 37352773}
@@ -31731,6 +31732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPDamagePlayer
   HPbar: {fileID: 672942358}
+  HpdamEn: {fileID: 936687942}
   maxHealth: 100
   currentHealth: 100
   damagePlayer: 10
