@@ -3,7 +3,7 @@ using UnityEngine;
 public class HPDamageEnemy : MonoBehaviour
 {
     public float damageEnemy = 15f;
-    public float attackDelay = 1f;
+    public float attackDelay = 5f;
     private float nextAttackTime = 0f;
     private float lastAttackTime = 0f;
     private bool canAttack = false;

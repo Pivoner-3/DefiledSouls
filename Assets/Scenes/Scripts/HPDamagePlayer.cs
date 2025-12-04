@@ -3,12 +3,15 @@ using UnityEngine.UI;
 public class HPDamagePlayer : MonoBehaviour
 {
     public HBar HPbar;
+    public Transform startPosition;
+    private bool isDead;
     public HPDamageEnemy HpdamEn;
     public float maxHealth = 100f;
     public float currentHealth;
     public float damagePlayer = 10f;
     public bool attackbool = false;
     public KeyCode attack = KeyCode.R;
+    
     void Start()
     {
         if (HPbar == null)
@@ -20,6 +23,7 @@ public class HPDamagePlayer : MonoBehaviour
             }
         }
         currentHealth = maxHealth;
+        isDead = false;
     }
     void Update()
     {
@@ -28,6 +32,15 @@ public class HPDamagePlayer : MonoBehaviour
             attackbool = true;
             // ИЗМЕНЕНИЕ: сразу атакуем при нажатии R
             Attack();
+        }
+        if (isDead)
+        {
+            // Возвращаем игрока на стартовую позицию
+            transform.position = startPosition.position;
+            // Восстанавливаем здоровье
+            currentHealth = maxHealth;
+            // Снимаем флаг смерти
+            isDead = false;
         }
     }
 
@@ -69,16 +82,16 @@ public class HPDamagePlayer : MonoBehaviour
 
     public void TakeDamage()
     {
-        currentHealth -= HpdamEn.damageEnemy;
+        if (currentHealth <= 0) return;
+        currentHealth -= HpdamEn.damageEnemy;   
         Debug.Log($"Игрок получил урон.");
         if (currentHealth <= 0)
         {
             Die();
         }
     }
-    private void Die()
+    void Die()
     {
-        Debug.Log("Игрок погиб!");
-        Destroy(gameObject);
+        isDead = true;
     }
 }
