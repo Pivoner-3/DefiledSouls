@@ -3,8 +3,13 @@ using UnityEngine;
 public class HPDamageEnemy : MonoBehaviour
 {
     public float damageEnemy = 15f;
+<<<<<<< Updated upstream
     public float attackDelay = 5f;
     private float nextAttackTime = 0f;
+=======
+    public float attackDelay = 1f;
+    private float nextAttackTime = 1f;
+>>>>>>> Stashed changes
     private float lastAttackTime = 0f;
     private bool canAttack = false;
 
@@ -55,7 +60,6 @@ public class HPDamageEnemy : MonoBehaviour
             Die();
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && canAttack)
@@ -66,7 +70,6 @@ public class HPDamageEnemy : MonoBehaviour
     }
     private void AttackPlayer(GameObject player)
     {
-        // Получаем HBar у игрока, а не HPDamagePlayer
         HPDamagePlayer playerHealth = player.GetComponent<HPDamagePlayer>();
 
         if (playerHealth != null)
