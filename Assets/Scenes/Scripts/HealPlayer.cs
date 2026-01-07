@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealPlayer : MonoBehaviour
 {
-    public float healOfPlayer = 30f;
+    public float healOfPlayer = 15f;
     private float nextHeallTime = 1f;
     public float heallDelay = 1f;
     private float lastHealTime = 0f;
