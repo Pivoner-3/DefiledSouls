@@ -5,7 +5,6 @@ public class HBarEnem : MonoBehaviour
     [SerializeField] public Image hImageEnemy;
     public HPDamagePlayer HPDamagePl;
     public HPDamageEnemy HPDamageEn;
-
     void Start()
     {
         hImageEnemy = GetComponent<Image>();

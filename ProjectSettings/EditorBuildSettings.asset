@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Cainos/Pixel Art Top Down - Basic/Scene/SC Demo.unity
+    path: Assets/Scenes/Menu.unity
+    guid: 8b3f6f4d79b0c8044bebec6efe960db1
+  - enabled: 1
+    path: Assets/Scenes/SC Demo.unity
     guid: 8c13838df8e680749ae1bb30cfe63339
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

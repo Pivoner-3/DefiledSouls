@@ -6,6 +6,7 @@ public class HPDamagePlayer : MonoBehaviour
     public Transform startPosition;
     private bool isDead;
     public HPDamageEnemy HpdamEn;
+
     public float maxHealth = 100f;
     public float currentHealth;
     public float damagePlayer = 10f;
@@ -30,7 +31,6 @@ public class HPDamagePlayer : MonoBehaviour
         if (Input.GetKeyDown(attack))
         {
             attackbool = true;
-            // ИЗМЕНЕНИЕ: сразу атакуем при нажатии R
             Attack();
         }
         if (isDead)
@@ -76,10 +76,8 @@ public class HPDamagePlayer : MonoBehaviour
                 }
             }
         }
-
         attackbool = false;
     }
-
     public void TakeDamage()
     {
         if (currentHealth <= 0) return;
